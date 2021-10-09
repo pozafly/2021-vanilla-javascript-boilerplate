@@ -23,9 +23,17 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      // index.html 템플릿을 기반으로 빌드 결과물을 추가해줌
+      template: 'src/index.html',
+    }),
+  ],
   devServer: {
     port: 8080,
     open: true,
+    hot: true,
+    watchContentBase: true,
     proxy: {
       '/api': {
         target: 'http://localhost:3000',
@@ -33,10 +41,4 @@ module.exports = {
       },
     },
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      // index.html 템플릿을 기반으로 빌드 결과물을 추가해줌
-      template: 'src/index.html',
-    }),
-  ],
 };

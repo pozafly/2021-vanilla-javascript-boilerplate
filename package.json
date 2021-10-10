@@ -6,6 +6,7 @@
   "repository": "https://github.com/pozafly/2021-vanilla-javascript-bolierplate",
   "scripts": {
     "dev": "webpack serve --hot",
+    "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -25,6 +26,7 @@
     "html-webpack-plugin": "^5.3.1",
     "prettier": "^2.3.0",
     "style-loader": "^3.1.0",
+    "url-loader": "^4.1.1",
     "webpack": "^5.37.1",
     "webpack-cli": "^4.7.0",
     "webpack-dev-server": "^3.11.2"
